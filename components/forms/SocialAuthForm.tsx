@@ -5,7 +5,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { toast } from "@/hooks/use-toast";
 import { signIn } from "next-auth/react";
-import ROUTES from "@/app/constants/routes";
+import ROUTES from "@/constants/routes";
 
 const SocialAuthForm = () => {
   const ButtonClass =
