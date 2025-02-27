@@ -51,3 +51,24 @@ export const SignUpSchema = z.object({
       message: "Password must contain at least one special character.",
     }),
 });
+
+export const AskQuestionSchema = z.object({
+  title: z
+    .string()
+    .min(10, { message: "Title must be at least 10 characters long." })
+    .max(100, { message: "Title cannot exceed 100 characters." }),
+
+  content: z
+    .string()
+    .min(20, { message: "Description must be at least 20 characters long." }),
+
+  tags: z
+    .array(
+      z
+        .string()
+        .min(1, { message: "At least one tag is required." })
+        .max(5, { message: "A maximum of 5 tags is allowed." })
+    )
+    .min(1, { message: "At least one tag is required." })
+    .max(3, { message: "A maximum of 5 tags is allowed." }),
+});
