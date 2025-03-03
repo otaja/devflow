@@ -1,6 +1,14 @@
 @import url("@radix-ui/colors/tomato-dark.css");
 @import url("@radix-ui/colors/mauve-dark.css");
 
+.markdown-editor {
+  border-radius: 0 !important;
+}
+
+.markdown-editor * {
+  border-radius: 0 !important;
+}
+
 .dark .dark-editor {
   --accentBase: var(--tomato-1);
   --accentBgSubtle: var(--tomato-2);
